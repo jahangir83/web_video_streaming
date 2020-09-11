@@ -1,0 +1,51 @@
+<%- include ("layouts/header")%>
+    <div class="container">
+        <div class="row  py-5 my-4">
+            <div class="col-md-12">
+                <h1>upload video</h1>
+        
+
+                <form action="/upload-video " method="POST" enctype="multipart/form-data">
+                                        
+                    <div class="form-group">
+                        <label>Select video</label>
+                        <input type="file" name="video" required class="form-control-file" accept="video/*" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Select thumbnail</label>
+                        <input type="file" name="thumbnail" required class="form-control-file" accept="image/*" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>title</label>
+                        <input type="text" name="title" required class="form-control"  required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>description</label>
+                        <textarea name="description" required class="form-control"  required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tags</label>
+                        <input type="text" name="tags" required class="form-control"  required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>category</label>
+                        <select class="form-control"name="category">
+                            <option value="Technology">Technology</option>
+                            <option value="Gaming">Gaming</option>
+                            <option value="Edocation">Edocation</option>
+                            <option value="Funny">Funny</option>
+                        </select>
+                    </div>
+                
+
+                    <input type="submit" value="Signup" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+<%- include ("layouts/footer")%>
